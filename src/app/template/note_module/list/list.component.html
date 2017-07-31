@@ -1,0 +1,31 @@
+<div class="list">
+    <div class="search">
+        <div class="sch_box">
+            <i class="iconfont icon-search"></i>
+            <input (keyup)="autoCompleter($event, keys)" [(ngModel)]="keys" type="text" placeholder="标题" />
+        </div>
+    </div>
+    <div class="item-list" *ngIf="listData.length == 0">
+        <div class="data_is_none">
+            未检索到日记
+        </div>
+    </div>
+    <div class="item-list" *ngIf="listData.length > 0">
+        <div class="item-block" *ngFor="let v of listData" [ngClass]="{'active': list_active[v.id] == true}" (click)="listSelectd(v)" (contextmenu)="contextMenu($event, v, 'last')">
+            <div class="title">
+                <i class="iconfont icon-orders"></i>
+                <span [hidden]="renameEdit[v.id]" (dblclick)="dblRename(v)">{{v.title}}</span>
+                <input
+                        type="text"
+                        [hidden]="!renameEdit[v.id]"
+                        id="listRenameInput_{{v.id}}"
+                        [(ngModel)]="v.title"
+                        (blur)="renameArticle($event,'blur',v)"
+                        (keyup)="renameArticle($event,'keyup',v)"
+                />
+            </div>
+            <div class="date">{{v.input_time | date:'yyyy/MM/dd HH:mm'}}</div>
+            <div class="des">{{ v.des }}</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="view" *ngIf="article.id !== 0">
+    <!--<div class="view-tabs">-->
+        <!--<div class="tab" [ngClass]="{'active': v.id === article.id, 'lastOne': tabs.length === 1}" *ngFor="let v of tabs" (click)="select(v.id)">-->
+            <!--<span>{{v.title}}</span>-->
+            <!--<em *ngIf="tabs.length > 1" class="iconfont icon-window-close" (click)="tabsRemove(v)"></em>-->
+        <!--</div>-->
+    <!--</div>-->
+    <app-view-tabs [activeId]="article.id" (tabActiveOut)="onTabActive($event)" (tabCloseOut)="onTabClose($event)"></app-view-tabs>
+    <div class="article-info">
+        <div class="title-main">
+            <h1>{{article.title}}</h1>
+            <div class="ctrl">
+                <span [ngClass]="{'active': articleEdit == false}" (click)="articleEdit = false" ><i class="iconfont icon-browse"></i> 预览</span>
+                <span [ngClass]="{'active': articleEdit == true}" (click)="articleEdit = true"><i class="iconfont icon-edit"></i> 编辑</span>
+            </div>
+        </div>
+        <div class="title-sub"></div>
+    </div>
+    <div class="article-wrap">
+        <div class="preview" id="preview" [hidden]="articleEdit == true" [innerHTML]="article.content_html" appSystemBrowser></div>
+        <div class="edit" [hidden]="articleEdit == false">
+            <div class="wrap">
+                <app-markdown-editor [(model)]="article.content"></app-markdown-editor>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="view-default" *ngIf="article.id == 0">
+    <div class="def">M</div>
+</div>

@@ -1,0 +1,164 @@
+:host {
+    width: 207px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: RGBA(248,248,248,.5);
+    /*border-right: 1px solid #E0E0E0;*/
+}
+
+:host .list {
+    width: 100%;
+    height: 100%;
+    float: left;
+    padding-top: 32px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+:host .list .search {
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    position: absolute;
+    padding: 3px;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    /*border-bottom: 1px solid #E0E0E0;*/
+}
+
+:host .list .search .sch_box {
+    width: 100%;
+    height: 100%;
+    float: left;
+    display: flex;
+}
+
+:host .list .search .sch_box i {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    font-weight: bold;
+}
+
+:host .list .search .sch_box input {
+    flex: 1;
+    border: none;
+    font-size: 12px;
+    padding-right: 5px;
+    background: none;
+    color: #555;
+}
+
+:host .list .item-list {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+:host .list .item-list .data_is_none{
+    width: 100%;
+    line-height: 30px;
+    float: left;
+    padding: 0 10px 0 10px;
+    font-size:12px;
+    color: #888;
+    box-sizing: border-box;
+}
+
+:host .list .item-list .item-block {
+    width: 100%;
+    float: left;
+    padding: 10px;
+    cursor: default;
+    font-size: 14px;
+    box-sizing: border-box;
+    position: relative;
+    /*border-bottom: 1px solid #E0E0E0;*/
+}
+
+:host .list .item-list .item-block:hover{
+    background-color: #F5F5F5;
+}
+
+:host .list .item-list .item-block.active{
+  background-color: #02A65A;
+}
+
+:host .list .item-list .item-block .title{
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    float: left;
+    cursor: pointer;
+    display: flex;
+    font-weight: 500;
+    color: #494949;
+    font-size: 12px;
+}
+
+:host .list .item-list .item-block.active .title{
+    color: #FFF;
+}
+
+:host .list .item-list .item-block .title i{
+    width: 20px;
+    height: 24px;
+    line-height: 24px;
+    font-size:12px;
+}
+
+:host .list .item-list .item-block .title span{
+    flex: 1;
+}
+
+:host .list .item-list .item-block input{
+    width: 100%;
+    height: 21px;
+    float: left;
+    font-size:12px;
+    margin-top:2px;
+    margin-bottom:1px;
+    padding-left:6px;
+    padding-right:6px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+:host .list .item-list .item-block input:focus{
+    color: #068548;
+    border: 1px solid #068548;
+}
+
+:host .list .item-list .item-block .date{
+    width: 100%;
+    float: left;
+    color: #068548;
+    line-height: 25px;
+    font-size:12px;
+}
+
+:host .list .item-list .item-block.active .date{
+  color: RGBA(255,255,255,.8);
+}
+
+:host .list .item-list .item-block .des{
+    width: 100%;
+    line-height: 140%;
+    max-height: 32px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    float: left;
+    font-size:12px;
+    color: #aaa;
+}
+
+:host .list .item-list .item-block.active .des{
+    color: RGBA(255,255,255,.8);
+}

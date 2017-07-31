@@ -1,0 +1,13 @@
+<div class="header">
+    <div class="wind-setting">
+        <i class="fa fa-bars" (click)="columnSwitch()"><em>{{columnNum}}</em></i>
+        <!--<i class="fa fa-trash-o active"></i>-->
+    </div>
+    <app-action-message></app-action-message>
+    <div class="tools">
+        <span class="iconfont icon-window-minimize" title="缩小" (click)="actionWin('minimize')"></span>
+        <span *ngIf="!isMaximize" class="iconfont icon-window-maximize" title="放大" (click)="actionWin('maximize')"></span>
+        <span *ngIf="isMaximize" class="iconfont icon-windowrestore" title="缩回" (click)="actionWin('restore')"></span>
+        <span class="iconfont icon-window-close" title="关闭" (click)="actionWin('close')"></span>
+    </div>
+</div>

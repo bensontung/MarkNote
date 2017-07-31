@@ -1,0 +1,60 @@
+:host {
+  width: 100%;
+  height: 100%;
+  float: left;
+  padding-top: 32px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  /*padding: 0 3px 3px 3px;*/
+  box-sizing: border-box;
+  border: 1px solid #555;
+}
+
+.main .module-bar {
+  width: 50px;
+  height: 100%;
+  display: none;
+  border-radius: 3px 0 0 3px;
+  background-color: #E6EAED;
+  box-sizing: border-box;
+  /*border-right: 1px solid #CAD4E1;*/
+}
+
+.main .module-bar .module-ico {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  float: left;
+  color: #AAA;
+  cursor: pointer;
+  font-size: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.main .module-bar .module-ico:hover {
+  background-color: RGBA(255, 255, 255, .1);
+}
+
+.main .module-bar .module-ico.active {
+  color: #438BDA;
+  border-radius: 3px;
+  background-color: RGBA(255, 255, 255, .3);
+}
+
+.main .module-main {
+  height: 100%;
+  flex: 1;
+  /*border-radius: 0 3px 3px 0;*/
+  background-color: #FFF;
+  overflow: hidden;
+}

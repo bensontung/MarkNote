@@ -1,0 +1,16 @@
+<div class="modal" *ngIf="modal == true">
+    <div class="modal-mask"></div>
+    <div class="modal-panel drag-box">
+        <div class="modal-body">
+            <div class="modal-header" appModalDrag>
+                <span class="title">{{config.title}}</span>
+                <span class="close iconfont icon-close" *ngIf="config.headerClose == true" (click)="closeModal()"></span>
+            </div>
+            <ng-content select=".modal-content"></ng-content>
+            <div class="modal-footer" *ngIf="config.footerButton == true">
+                <button (click)="buttonClose()">关闭</button>
+                <button (click)="buttonConfirm()" class="active">确认</button>
+            </div>
+        </div>
+    </div>
+</div>

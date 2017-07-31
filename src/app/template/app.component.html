@@ -1,0 +1,8 @@
+<app-header></app-header>
+<div class="main">
+    <div class="module-bar" *ngIf="barStatus == 1 || barStatus == 2 || barStatus == 3">
+        <div class="module-ico iconfont" ngClass="{{v.icon}}" routerLink="{{v.router}}" routerLinkActive="active" [hidden]="v.display === false" *ngFor="let v of module"></div>
+    </div>
+    <div class="module-main"><router-outlet></router-outlet></div>
+    <div #insert></div>
+</div>

@@ -1,0 +1,50 @@
+.mark-editor {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.mark-editor .toolbar {
+    width: 100%;
+    height: 35px;
+    padding: 3px 0 3px 0;
+    box-sizing: border-box;
+}
+
+.mark-editor .toolbar .line{
+    width: 1px;
+    height: 25px;
+    float: left;
+    margin:2px 3px 2px 3px;
+    background-color: #eee;
+}
+
+.mark-editor .toolbar button {
+    width: 29px;
+    height: 29px;
+    line-height: 29px;
+    text-align: center;
+    float: left;
+    color: #888;
+    cursor: pointer;
+    border: none;
+    border-radius: 1px;
+    font-size: 14px;
+    background: none;
+}
+
+.mark-editor .toolbar button:hover {
+    color: #FFF;
+    background-color: #4E79A8;
+}
+
+.mark-editor textarea {
+    width: 100%;
+    height: 80%;
+    resize: none;
+    border: 1px solid #E8E8E8;
+    box-sizing: border-box;
+    padding: 6px 8px 6px 8px;
+    background-color: #FCFCFC;
+    font-family: 'Andale Mono', 'Lucida Typewriter', monospace;
+}

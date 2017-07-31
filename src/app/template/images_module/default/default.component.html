@@ -1,0 +1,57 @@
+<div class="sidebar">
+    <h1>图片压缩 <i class="fa fa-cog" aria-hidden="true" (click)="setting()" ></i></h1>
+    <div class="action-group">
+        <button class="select-files" (click)="importFiles()" [disabled]="work_status === 2">选择文件</button>
+        <!--<button class="select-folder" (click)="importFolder()" [disabled]="work_status === 2">选择目录</button>-->
+        <div class="out-type">
+            <span>转换：</span>
+            <label *ngFor="let v of formatData">
+                <input name="format" (change)="format = v.id; formatChange(format)" type="radio" [checked]="format  === v.id" [disabled]="work_status === 2" /><em> {{v.name}}</em>
+            </label>
+        </div>
+        <div class="out-type">
+            <span>质量：</span>
+            <input name="type" type="number" min="0" max="100" [(ngModel)]="quality" [disabled]="work_status === 2 || format === 1" />
+        </div>
+        <button class="select-folder" (click)="exportFolder()" [disabled]="work_status === 2">输出目录</button>
+    </div>
+    <button class="start" [hidden]="work_status !== 0" (click)="start()">开始</button>
+    <button class="start ready" [hidden]="work_status !== 1" (click)="start()">开始</button>
+    <button class="start working" [hidden]="work_status !== 2" (click)="start()"> 处理中...</button>
+</div>
+<div class="main">
+    <div class="table-header">
+        <button (click)="setEmpty()" [disabled]="work_status === 2" >清空列表</button>
+        <span>输出地址：<small>{{out_dir}}</small></span>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th width="60">序号</th>
+                <th>文件</th>
+                <th width="80">导入体积</th>
+                <th width="80">输出格式</th>
+                <th width="80">输出质量</th>
+                <th width="80">压缩比率</th>
+                <th width="100">输出状态</th>
+                <th width="80">输出体积</th>
+                <th width="80">输出用时</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let v of data; let index = index">
+                <td>{{index +1}}</td>
+                <td>{{v.file_url}}</td>
+                <td>{{v.import_size}}</td>
+                <td>{{v.export_type}}</td>
+                <td>{{quality}}</td>
+                <td>{{v.export_rate}}</td>
+                <td class="ready" [hidden]="v.export_status !== 0">导入成功</td>
+                <td class="working" [hidden]="v.export_status !== 1"><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i> 处理中...</td>
+                <td class="done" [hidden]="v.export_status !== 2">处理成功</td>
+                <td>{{v.export_size}}</td>
+                <td>{{v.export_time}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

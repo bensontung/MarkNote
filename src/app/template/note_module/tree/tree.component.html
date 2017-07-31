@@ -1,0 +1,71 @@
+<div class="tree">
+    <div class="item-name">笔记</div>
+    <div class="item-block" *ngFor="let v1 of treeListData" (contextmenu)="contextMenu($event, v1, 'default')">
+        <div class="label" [ngClass]="{'default':v1.def == 0, 'active': tree_active[v1.id] == true}" (click)="treeSelectd(v1)">
+            <i *ngIf="v1.children.length == 0"></i>
+            <i *ngIf="v1.children.length > 0" class="iconfont icon-more" [ngClass]="{'close':v2_open[v1.id] == true,'open':v2_open[v1.id] == false}" (click)="v2_open[v1.id] = v2_open[v1.id] == true ? false : true"></i>
+            <i class="iconfont icon-folder"></i>
+            <span>{{v1.name}}</span>
+            <small [ngClass]="{'def':v1.counts == 0}">{{v1.counts}}</small>
+        </div>
+        <div class="item-block" [hidden]="v2_open[v1.id] == true" *ngFor="let v2 of v1.children" (contextmenu)="contextMenu($event, v2)">
+            <div class="label" [ngClass]="{'default':v2.def == 0, 'active': tree_active[v2.id] == true}" (click)="treeSelectd(v2)">
+                <i *ngIf="v2.children.length == 0"></i>
+                <i *ngIf="v2.children.length > 0" class="iconfont icon-more" [ngClass]="{'close':v3_open[v2.id] == true,'open':v3_open[v2.id] == false}" (click)="v3_open[v2.id] = v3_open[v2.id] == true ? false : true"></i>
+                <i class="iconfont icon-folder"></i>
+                <span [hidden]="renameEdit[v2.id]" (dblclick)="dblRename(v2)">{{v2.name}}</span>
+                <input
+                        id="treeRenameInput_{{v2.id}}"
+                        [hidden]="!renameEdit[v2.id]"
+                        [(ngModel)]="v2.name"
+                        type="text" (blur)="renameTree($event,'blur',v2)" (keyup)="renameTree($event,'keyup',v2,$event)"
+                />
+                <small [ngClass]="{'def':v2.counts == 0}">{{v2.counts}}</small>
+            </div>
+            <div class="item-block" [hidden]="v3_open[v2.id] == true" *ngFor="let v3 of v2.children" (contextmenu)="contextMenu($event, v3)">
+                <div class="label" [ngClass]="{'default':v3.def == 0, 'active': tree_active[v3.id] == true}" (click)="treeSelectd(v3)">
+                    <i *ngIf="v3.children.length == 0"></i>
+                    <i *ngIf="v3.children.length > 0" class="iconfont icon-more" [ngClass]="{'close':v4_open[v3.id] == true,'open':v4_open[v3.id] == false}" (click)="v4_open[v3.id] = v4_open[v3.id] == true ? false : true"></i>
+                    <i class="iconfont icon-folder"></i>
+                    <span [hidden]="renameEdit[v3.id]" (dblclick)="dblRename(v3)">{{v3.name}}</span>
+                    <input
+                            id="treeRenameInput_{{v3.id}}"
+                            [hidden]="!renameEdit[v3.id]"
+                            [(ngModel)]="v3.name"
+                            type="text" (blur)="renameTree($event,'blur',v3)" (keyup)="renameTree($event,'keyup',v3)"
+                    />
+                    <small [ngClass]="{'def':v3.counts == 0}">{{v3.counts}}</small>
+                </div>
+                <div class="item-block" [hidden]="v4_open[v3.id] == true" *ngFor="let v4 of v3.children" (contextmenu)="contextMenu($event, v4)">
+                    <div class="label" [ngClass]="{'default':v4.def == 0, 'active': tree_active[v4.id] == true}" (click)="treeSelectd(v4)">
+                        <i *ngIf="v4.children.length == 0"></i>
+                        <i *ngIf="v4.children.length > 0" class="iconfont icon-more" [ngClass]="{'close':v5_open[v4.id] == true,'open':v5_open[v4.id] == false}" (click)="v5_open[v4.id] = v5_open[v4.id] == true ? false : true"></i>
+                        <i class="iconfont icon-folder"></i>
+                        <span [hidden]="renameEdit[v4.id]" (dblclick)="dblRename(v4)">{{v4.name}}</span>
+                        <input
+                                id="treeRenameInput_{{v4.id}}"
+                                [hidden]="!renameEdit[v4.id]"
+                                [(ngModel)]="v4.name"
+                                type="text" (blur)="renameTree($event,'blur',v4)" (keyup)="renameTree($event,'keyup',v4)"
+                        />
+                        <small [ngClass]="{'def':v4.counts == 0}">{{v4.counts}}</small>
+                    </div>
+                    <div class="item-block" [hidden]="v5_open[v4.id] == true" *ngFor="let v5 of v4.children" (contextmenu)="contextMenu($event, v5, 'last')">
+                        <div class="label" [ngClass]="{'default':v5.def == 0, 'active': tree_active[v5.id] == true}" (click)="treeSelectd(v5)">
+                            <i></i>
+                            <i class="iconfont icon-folder"></i>
+                            <span [hidden]="renameEdit[v5.id]" (dblclick)="dblRename(v5)">{{v5.name}}</span>
+                            <input
+                                    id="treeRenameInput_{{v5.id}}"
+                                    [hidden]="!renameEdit[v5.id]"
+                                    [(ngModel)]="v5.name"
+                                    type="text" (blur)="renameTree($event,'blur',v5)" (keyup)="renameTree($event,'keyup',v5)"
+                            />
+                            <small [ngClass]="{'def':v5.counts == 0}">{{v5.counts}}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

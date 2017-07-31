@@ -2,13 +2,15 @@
   "name": "ng-note4",
   "version": "0.0.0",
   "license": "MIT",
+  "main": "elerun.js",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "serve": "ng serve",
+    "build": "ng build --prod aot && gulp step1 && cd ele && electron-packager ./ MarkNote --out ../ --platform=win32 --arch=x64 --overwrite --icon=./icon.ico && gulp step2 && gulp step3",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "start": "electron ."
   },
   "private": true,
   "dependencies": {
@@ -22,6 +24,10 @@
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
     "core-js": "^2.4.1",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "livechatapi": "^0.6.0",
+    "marked": "^0.3.6",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },
@@ -37,12 +43,13 @@
     "karma": "~1.7.0",
     "karma-chrome-launcher": "~2.1.1",
     "karma-cli": "~1.0.1",
+    "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "karma-coverage-istanbul-reporter": "^1.2.1",
     "protractor": "~5.1.2",
     "ts-node": "~3.0.4",
     "tslint": "~5.3.2",
-    "typescript": "~2.3.3"
+    "typescript": "~2.3.3",
+    "electron": "~1.6.2"
   }
 }

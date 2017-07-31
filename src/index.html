@@ -1,14 +1,37 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>NGNOTE4</title>
-  <base href="/">
+    <meta charset="utf-8">
+    <title>MarkNote</title>
+    <base href="./">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script>
+        const electron    = require('electron');
+        const fs          = require('fs');
+        const path        = require('path');
+        const sqlite3     = electron.remote.require('sqlite3');
+        const appPath     = __dirname.replace(`\\${path.basename(__dirname)}`, '');
+        const exec        = require('child_process').exec;
+        const md5         = electron.remote.require('md5');
+        const imageinfo   = electron.remote.require('imageinfo');
+        window.ondragover = function(e) { e.preventDefault(); return false };
+        window.ondrop     = function(e) { e.preventDefault(); return false };
+        const devModel    = false;
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+        const baseConfig  = {
+            path: {
+                bin: `${process.cwd()}\\bin\\`,
+                images: `${process.cwd()}\\attached\\images_zip\\`,
+                attached: `${process.cwd()}\\attached\\`,
+                database: `${process.cwd()}\\database\\`
+            },
+            url: devModel === true ? './' : '../../',
+        };
+
+    </script>
 </head>
 <body>
-  <app-root></app-root>
+<app-root>Loading...</app-root>
 </body>
 </html>

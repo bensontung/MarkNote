@@ -1,0 +1,5 @@
+<app-modal [config]="config" (onModalConfirm)="onModalConfirm($event)" (onModalClose)="onModalClose($event)" #appModal>
+    <div class="modal-content">
+        <label><span>超链接</span><input type="text" [(ngModel)]="superLink.text" /></label>
+    </div>
+</app-modal>

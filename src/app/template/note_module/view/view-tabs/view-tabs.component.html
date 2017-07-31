@@ -1,0 +1,13 @@
+<div class="view-tabs">
+    <div
+            id="{{v.id}}"
+            class="tab"
+            [ngClass]="{'active': v.id === activeId, 'lastOne': tabs.length === 1}"
+            *ngFor="let v of tabs; let i = index"
+            (click)="tabActive(v.id)"
+            (contextmenu)="contextMenu($event, v, i)"
+    >
+        <span>{{v.title}}</span>
+        <em *ngIf="tabs.length > 1" class="iconfont icon-window-close" (click)="tabClose(v);"></em>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="mark-editor">
+    <div class="toolbar">
+        <button class="btn btn-default btn-xs fa fa-bold"          (click)="onEditor('bold')"          ></button>
+        <button class="btn btn-default btn-xs fa fa-italic"        (click)="onEditor('italic')"        ></button>
+        <button class="btn btn-default btn-xs fa fa-underline"     (click)="onEditor('underline')"     ></button>
+        <button class="btn btn-default btn-xs fa fa-strikethrough" (click)="onEditor('strikethrough')" ></button>
+        <div class="line"></div>
+        <button class="btn btn-default btn-xs fa fa-minus"         (click)="onEditor('hr')"            ></button>
+        <button class="btn btn-default btn-xs fa fa-quote-left"    (click)="onEditor('quote')"         ></button>
+        <button class="btn btn-default btn-xs fa fa-list-ul"       (click)="onEditor('list')"          ></button>
+        <button class="btn btn-default btn-xs fa fa-list-ol"       (click)="onEditor('list-2')"        ></button>
+        <button class="btn btn-default btn-xs fa fa-table"         (click)="onEditor('table')"         ></button>
+        <button class="btn btn-default btn-xs fa fa-header"        (click)="onEditor('header')"        ></button>
+        <div class="line"></div>
+        <button class="btn btn-default btn-xs fa fa-link"          (click)="onEditor('url')"           ></button>
+        <button class="btn btn-default btn-xs fa fa-image"         (click)="onEditor('img')"           ></button>
+        <div class="line"></div>
+        <button class="btn btn-default btn-xs fa fa-code"          (click)="onEditor('code')"          ></button>
+        <button class="btn btn-default btn-xs fa fa-file-code-o"   (click)="onEditor('codeblock')"     ></button>
+        <div class="line"></div>
+        <button class="btn btn-default btn-xs fa fa-floppy-o"      (click)="editorSave()"              ></button>
+    </div>
+    <textarea #editArea class="form-control" rows="20" [(ngModel)]="model" (ngModelChange)="modelChange.emit($event)" (keydown)="shortcut($event)"></textarea>
+</div>

@@ -6,7 +6,7 @@
   "apps": [
     {
       "root": "src",
-      "outDir": "dist",
+      "outDir": "angular-build",
       "assets": [
         "assets",
         "favicon.ico"
@@ -19,9 +19,17 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "./statics/css/bootstrap-grid.min.css",
+        "./statics/css/styles.css",
+        "./statics/css/iconfont.css",
+        "./statics/css/font-awesome.min.css",
+        "./statics/css/code-color/github-gist.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "./statics/js/hjxj.js",
+        "./statics/js/highlightjs-line-numbers.min.js",
+        "./statics/js/ramda.min.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

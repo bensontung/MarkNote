@@ -1,0 +1,6 @@
+<div class="action-message" *ngIf="show === true">
+    <div class="message" [ngClass]="{'success':type == 'success', 'warning':type == 'warning'}">
+        <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+        <span>{{message}}</span>
+    </div>
+</div>
