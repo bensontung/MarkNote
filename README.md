@@ -9,9 +9,9 @@
 link: [sqlite3-electronv1.6.x_x64][2]
      
     > npm install  
-    > npm start  
-    > npm serve  
-    > npm build  
+    > npm run start  
+    > npm run serve  
+    > npm run build  
 
 ---
 
