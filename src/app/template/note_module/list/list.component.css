@@ -102,6 +102,7 @@
     font-weight: 500;
     color: #494949;
     font-size: 12px;
+    word-break:break-all;
 }
 
 :host .list .item-list .item-block .title i{
@@ -150,4 +151,5 @@
     float: left;
     font-size:12px;
     color: #aaa;
+    word-break:break-all;
 }
