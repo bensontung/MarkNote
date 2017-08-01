@@ -34,6 +34,7 @@
     margin-left: -150px;
     margin-top: -150px;
     -webkit-app-region: drag;
+    -webkit-user-select: none;
 }
 
 :host .view .article-info {
@@ -67,6 +68,7 @@
     line-height: 30px;
     float: right;
     margin-right: 5px;
+    -webkit-user-select: none;
 }
 
 :host .view .article-info .title-main .ctrl span {

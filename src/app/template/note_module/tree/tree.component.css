@@ -24,6 +24,7 @@
     color: #494949;
     box-sizing: border-box;
     -webkit-app-region: drag;
+    -webkit-user-select: none;
     /*border-bottom: 1px solid #E0E0E0;*/
 }
 
@@ -31,6 +32,7 @@
     width: 100%;
     float: left;
     box-sizing: border-box;
+    -webkit-user-select: none;
 }
 
 :host .tree .item-block .label {

@@ -69,6 +69,7 @@
     font-size:12px;
     color: #888;
     box-sizing: border-box;
+    -webkit-user-select: none;
 }
 
 :host .list .item-list .item-block {
@@ -79,6 +80,7 @@
     font-size: 14px;
     box-sizing: border-box;
     position: relative;
+    -webkit-user-select: none;
 }
 
 :host .list .item-list .item-block:hover{

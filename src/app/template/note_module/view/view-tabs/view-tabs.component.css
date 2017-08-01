@@ -34,8 +34,10 @@
     cursor: pointer;
     position: relative;
     font-size: 12px;
+    word-break:break-all;
     border-bottom: 2px solid #FFF;
     -webkit-app-region: no-drag;
+    -webkit-user-select: none;
 }
 
 :host .view-tabs .tab.lastOne {
