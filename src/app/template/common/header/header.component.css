@@ -4,6 +4,7 @@
     right: 0;
     top: 0;
     z-index: 999;
+    -webkit-app-region: no-drag;
 }
 
 :host .header {
@@ -12,7 +13,6 @@
     float: left;
     overflow: hidden;
     position: relative;
-    -webkit-app-region: drag;
     box-sizing: border-box;
     /*border-top: 1px solid RGBA(255, 255, 255, .2);*/
 }
@@ -23,7 +23,6 @@
     text-align: center;
     float: left;
     margin-left: 3px;
-    -webkit-app-region: no-drag;
 }
 
 :host .header .wind-setting i {

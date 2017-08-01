@@ -6,8 +6,8 @@
 }
 
 ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+    width: 4px;
+    height: 4px;
 }
 
 ::-webkit-scrollbar-track-piece {
@@ -16,15 +16,15 @@
 }
 
 ::-webkit-scrollbar-thumb:vertical {
-    height: 5px;
-    background-color: #CDCDCD;
+    height: 3px;
+    background-color: #E1E1E1;
     -webkit-border-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
-    width: 5px;
-    background-color: #CCCCCC;
-    -webkit-border-radius: 6px;
+    width: 3px;
+    background-color: #FCFCFC;
+    -webkit-border-radius: 3px;
 }
 
 html,

@@ -4,7 +4,6 @@
     flex-shrink: 0;
     overflow: hidden;
     background-color: #EDF5F6;
-    -webkit-app-region: drag;
     /*border-right: 1px solid #E0E0E0;*/
 }
 
@@ -24,6 +23,7 @@
     font-weight: 600;
     color: #494949;
     box-sizing: border-box;
+    -webkit-app-region: drag;
     /*border-bottom: 1px solid #E0E0E0;*/
 }
 
@@ -31,7 +31,6 @@
     width: 100%;
     float: left;
     box-sizing: border-box;
-    -webkit-app-region: no-drag;
 }
 
 :host .tree .item-block .label {

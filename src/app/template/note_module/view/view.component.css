@@ -17,7 +17,6 @@
     height: 100%;
     float: left;
     position: relative;
-    -webkit-app-region: drag;
 }
 
 .view-default .def {
@@ -34,12 +33,15 @@
     border-radius: 30px;
     margin-left: -150px;
     margin-top: -150px;
+    -webkit-app-region: drag;
 }
 
 :host .view .article-info {
     width: 100%;
     height: 50px;
     position: absolute;
+    padding-top:5px;
+    box-sizing: border-box;
     top: 46px;
     left: 0;
 }
@@ -55,7 +57,7 @@
     height: 30px;
     line-height: 30px;
     float: left;
-    margin-left: 10px;
+    margin-left: 20px;
     font-size: 16px;
     font-weight: normal;
 }
@@ -95,7 +97,7 @@
     width: 100%;
     height: 100%;
     float: left;
-    padding: 10px;
+    padding: 20px;
     box-sizing: border-box;
 }
 

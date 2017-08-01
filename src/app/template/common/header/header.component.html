@@ -1,9 +1,9 @@
 <div class="header">
     <app-action-message></app-action-message>
     <div class="tools">
-        <span class="iconfont icon-window-minimize" title="缩小" (click)="actionWin('minimize')"></span>
-        <span *ngIf="!isMaximize" class="iconfont icon-window-maximize" title="放大" (click)="actionWin('maximize')"></span>
-        <span *ngIf="isMaximize" class="iconfont icon-windowrestore" title="缩回" (click)="actionWin('restore')"></span>
-        <span class="iconfont icon-window-close" title="关闭" (click)="actionWin('close')"></span>
+        <span class="iconfont icon-window-minimize" (click)="actionWin('minimize')"></span>
+        <span *ngIf="!isMaximize" class="iconfont icon-window-maximize" (click)="actionWin('maximize')"></span>
+        <span *ngIf="isMaximize" class="iconfont icon-windowrestore" (click)="actionWin('restore')"></span>
+        <span class="iconfont icon-window-close" (click)="actionWin('close')"></span>
     </div>
 </div>
