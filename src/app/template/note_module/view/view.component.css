@@ -17,6 +17,7 @@
     height: 100%;
     float: left;
     position: relative;
+    -webkit-app-region: drag;
 }
 
 .view-default .def {

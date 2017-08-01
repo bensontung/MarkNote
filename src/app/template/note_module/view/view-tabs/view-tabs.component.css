@@ -1,75 +1,85 @@
+:host {
+    width: 80%;
+    height: 45px;
+    line-height: 45px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 0 5px 10px;
+    box-sizing: border-box;
+    -webkit-app-region: drag;
+}
+
 :host .view-tabs {
     width: 100%;
-    height: 25px;
+    height: 35px;
     overflow: hidden;
-    padding: 0 5px 0 5px;
-    box-sizing: border-box;
     background-color: #FFF;
-    position: absolute;
-    top: 10px;
-    left: 0;
+    float: left;
 }
 
 :host .view-tabs .tab {
     max-width: 122px;
     overflow: hidden;
-    text-overflow:ellipsis;
-    height: 25px;
-    line-height: 25px;
-    margin-left: 5px;
-    padding: 0 35px 0 10px;
-    background-color: #eee;
+    text-overflow: ellipsis;
+    height: 35px;
+    line-height: 35px;
+    margin-right: 10px;
+    padding: 0 25px 0 0;
+    background-color: #FFF;
+    box-sizing: border-box;
     /*border-radius: 13px;*/
     float: left;
     color: #666;
     cursor: pointer;
     position: relative;
     font-size: 12px;
+    border-bottom: 2px solid #FFF;
+    -webkit-app-region: no-drag;
 }
 
 :host .view-tabs .tab.lastOne {
-    padding: 0 10px 0 10px;
+    padding: 0;
 }
 
 :host .view-tabs .tab:hover {
-    background-color: #e1e1e1;
+
 }
 
 :host .view-tabs .tab.active {
-    background-color: #02A65A;
-    color: #FFF;
+    color: #31C27C;
     cursor: default;
+    border-bottom: 2px solid #31C27C;
 }
 
 :host .view-tabs .tab span {
-    height: 25px;
+    height: 33px;
+    line-height: 33px;
     float: left;
 }
 
 :host .view-tabs .tab em {
     width: 15px;
     height: 15px;
-    line-height: 16px;
+    line-height: 15px;
     position: absolute;
-    text-align: center;
+    text-align: right;
     right: 5px;
-    top: 5px;
+    top: 10px;
     cursor: pointer;
-    color: #aaa;
+    color: #ccc;
     border-radius: 50%;
     font-size: 10px;
 }
 
-:host .view-tabs .tab.active em{
-  color: #FFF;
+:host .view-tabs .tab em:hover {
+    color: #AAA;
 }
 
-:host .view-tabs .tab em:hover {
-  color: #666;
-  background-color: #CCC;
+:host .view-tabs .tab.active em {
+    color: #31C27C;
 }
 
 :host .view-tabs .tab.active em:hover {
-    color: #FFF;
-    background-color: #068548;
+    color: #068548;
 }

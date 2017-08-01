@@ -59,6 +59,7 @@
     float: left;
     overflow-y: auto;
     overflow-x: hidden;
+    -webkit-app-region: drag;
 }
 
 :host .list .item-list .data_is_none{
@@ -79,15 +80,15 @@
     font-size: 14px;
     box-sizing: border-box;
     position: relative;
-    /*border-bottom: 1px solid #E0E0E0;*/
+    -webkit-app-region: no-drag;
 }
 
 :host .list .item-list .item-block:hover{
-    background-color: #F5F5F5;
+    background-color: #F6F6F6;
 }
 
 :host .list .item-list .item-block.active{
-  background-color: #02A65A;
+  background-color: #F6F6F6;
 }
 
 :host .list .item-list .item-block .title{
@@ -101,10 +102,6 @@
     font-weight: 500;
     color: #494949;
     font-size: 12px;
-}
-
-:host .list .item-list .item-block.active .title{
-    color: #FFF;
 }
 
 :host .list .item-list .item-block .title i{
@@ -144,10 +141,6 @@
     font-size:12px;
 }
 
-:host .list .item-list .item-block.active .date{
-  color: RGBA(255,255,255,.8);
-}
-
 :host .list .item-list .item-block .des{
     width: 100%;
     line-height: 140%;
@@ -157,8 +150,4 @@
     float: left;
     font-size:12px;
     color: #aaa;
-}
-
-:host .list .item-list .item-block.active .des{
-    color: RGBA(255,255,255,.8);
 }

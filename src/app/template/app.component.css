@@ -2,7 +2,6 @@
   width: 100%;
   height: 100%;
   float: left;
-  padding-top: 32px;
   position: relative;
   box-sizing: border-box;
 }
@@ -16,7 +15,6 @@
   position: relative;
   /*padding: 0 3px 3px 3px;*/
   box-sizing: border-box;
-  border: 1px solid #555;
 }
 
 .main .module-bar {
