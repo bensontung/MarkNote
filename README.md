@@ -1,5 +1,8 @@
 #### info ####  
 > angular4 + electron 1.6.x + sqlite3  
+
+---
+
 #### dev #### 
 + 若是要开发的话，依赖于编译后的sqlite3，我这里已经编译好了，下载sqlite3-electronv1.6.x_x64后解压后将sqlite3文件夹将移动至项目的node_modules下  
 
