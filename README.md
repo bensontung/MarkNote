@@ -1,7 +1,7 @@
 #### info ####  
 > angular4 + electron 1.6.x + sqlite3  
-#### use #### 
-+ 依赖于 编译后的sqlite3，我这里已经编译好了，下载sqlite3后解压后将sqlite3文件夹将移动至项目的node_modules下  
+#### dev #### 
++ 若是要开发的话，依赖于编译后的sqlite3，我这里已经编译好了，下载sqlite3-electronv1.6.x_x64后解压后将sqlite3文件夹将移动至项目的node_modules下  
 
 + 请同时开启start与serve两个进程
 
@@ -15,7 +15,7 @@ link: [sqlite3-electronv1.6.x_x64][2]
 
 ---
 
-#### download: ####    
+#### download&use: ####    
 md5 : DFB2CD90AB55BDAE2B60E0733D28D138  
 link: [MarkNote1.0_for_win x64][1]
 
