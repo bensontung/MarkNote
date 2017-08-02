@@ -4,7 +4,7 @@
 ---
 
 #### dev #### 
-+ 若是要开发的话，依赖于编译后的sqlite3，我这里已经编译好了，下载sqlite3-electronv1.6.x_x64后解压后将sqlite3文件夹将移动至项目的node_modules下  
++ 若是要开发的话，依赖于编译后的sqlite3，我这里已经编译好了，下载sqlite3-electronv1.6.x_x64后解压后将sqlite3文件夹移动至项目的node_modules下  
 
 + 请同时开启start与serve两个进程
 
