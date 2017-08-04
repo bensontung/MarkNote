@@ -24,7 +24,7 @@
                     <div class="block" *ngFor="let v of searchData" (click)="goToSchNote(v.id, v.title)">
                         <div class="title" [innerHTML]="v.title"></div>
                         <div class="des" [innerHTML]="v.des"></div>
-                        <div class="count">{{v.schCount}}个结果</div>
+                        <div class="count">{{v.schCount}}</div>
                     </div>
                 </div>
             </div>

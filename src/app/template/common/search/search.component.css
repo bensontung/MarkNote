@@ -232,12 +232,20 @@
 }
 
 :host .search-panel > .search-body .search-list .block .count {
+    min-width: 20px;
+    height: 16px;
+    line-height: 18px;
+    text-align: center;
+    padding: 0 5px;
     position: absolute;
     right: 10px;
     top: 10px;
-    color: #F06868;
-    font-size: 12px;
+    color: #FFF;
+    border-radius: 8px;
+    font-size: 10px;
     font-weight: normal;
+    background: #F06868;
+    box-sizing: border-box;
 }
 
 :host .search-panel > .search-body .search-list .block:last-child {

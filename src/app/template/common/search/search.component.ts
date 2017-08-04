@@ -93,7 +93,7 @@ export class SearchComponent implements OnInit {
                 desCount = desCount.length;
             }
 
-            arr[i].title = title + ' <em>[' + arr[i].tname + ']</em>';
+            arr[i].title = title + ' <em> [ ' + arr[i].tname + ' ]</em>';
             arr[i].des = des;
             arr[i].schCount = titleCount + desCount;
             i++;
