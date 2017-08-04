@@ -1,3 +1,8 @@
+#### update log ####
++ 2017.08.04 增加高级搜索面板 快捷键 `CTRL+SHIFT+F`
+
+---
+
 #### info ####  
 > angular4 + electron 1.6.x + sqlite3  
 
