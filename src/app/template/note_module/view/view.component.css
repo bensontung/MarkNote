@@ -29,11 +29,11 @@
     position: absolute;
     left: 50%;
     top: 50%;
+    cursor: default;
     color: #EEE;
     border-radius: 30px;
     margin-left: -150px;
     margin-top: -150px;
-    -webkit-app-region: drag;
     -webkit-user-select: none;
 }
 
@@ -41,7 +41,7 @@
     width: 100%;
     height: 50px;
     position: absolute;
-    padding-top:5px;
+    padding-top: 5px;
     box-sizing: border-box;
     top: 46px;
     left: 0;
@@ -99,7 +99,7 @@
     width: 100%;
     height: 100%;
     float: left;
-    padding: 20px;
+    padding: 20px 5px 20px 20px;
     box-sizing: border-box;
 }
 
@@ -110,6 +110,11 @@
     overflow: hidden;
     float: left;
     box-sizing: border-box;
+}
+
+:host .view .article-wrap .preview,
+:host .view .article-wrap .edit{
+    padding-right: 15px;
 }
 
 :host .view .article-wrap .edit .wrap {
@@ -259,7 +264,7 @@
 
 :host /deep/ /deep/ .view .article-wrap .preview > p {
     width: 100%;
-    line-height: 27px;
+    line-height: 165%;
     margin-bottom: 25px;
     float: left;
 }
@@ -311,13 +316,18 @@
 :host /deep/ .view .article-wrap .preview ul {
     width: 100%;
     float: left;
-    padding: 0;
-    margin-left: 25px;
+    padding: 0 0 0 25px;
+    box-sizing: border-box;
 }
 
 :host /deep/ .view .article-wrap .preview li {
     line-height: 27px;
     display: list-item;
+    position: relative;
+}
+
+:host /deep/ .view .article-wrap .preview ul > li {
+    list-style: disc;
 }
 
 :host /deep/ .view .article-wrap .preview .hljs-line-numbers {
