@@ -22,12 +22,16 @@ import {DBService} from './service/sqlite3';
 import {NodeService} from './service/node';
 import {LocalStorageService} from './service/local-storage.service';
 
+import {TreeListViewComm} from './service/treeListViewComm';
+
 import {ActionMessageComm} from './service/action-message_comm';
 
 import {AppModalDirective} from './template/common/modal/modal.directive';
 
 import {ModalComm} from './service/modal.comm';
 import {ModalComponent} from './template/common/modal/modal.component';
+
+import {SearchComponent} from './template/common/search/search.component';
 
 import {SuperLinkComponent} from './template/common/markdown/markdown-editor/markdown-editor-modal/super-link/super-link.component';
 import {ImagesModuleSettingComponent} from './template/images_module/setting/setting.component';
@@ -47,6 +51,7 @@ import {ImagesModuleSettingComponent} from './template/images_module/setting/set
         HeaderComponent,
         ActionMessageComponent,
         ModalComponent,
+        SearchComponent,
         AppModalDirective,
         SuperLinkComponent,
         ImagesModuleSettingComponent
@@ -63,9 +68,11 @@ import {ImagesModuleSettingComponent} from './template/images_module/setting/set
         {provide: 'dialog', useClass: DialogService},
         {provide: 'actionMessage', useClass: ActionMessageComm},
         {provide: 'modalComm', useClass: ModalComm},
-        {provide: 'substr', useClass: SubstrService}
+        {provide: 'substr', useClass: SubstrService},
+        {provide: 'TreeListViewComm', useClass: TreeListViewComm}
     ],
     entryComponents: [
+        SearchComponent,
         SuperLinkComponent,
         ImagesModuleSettingComponent
     ],

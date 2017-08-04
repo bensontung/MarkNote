@@ -1,5 +1,5 @@
 <div class="tree">
-    <div class="item-name">笔记</div>
+    <div class="item-name">MarkNote</div>
     <div class="item-block" *ngFor="let v1 of treeListData" (contextmenu)="contextMenu($event, v1, 'default')">
         <div class="label" [ngClass]="{'default':v1.def == 0, 'active': tree_active[v1.id] == true}" (click)="treeSelectd(v1)">
             <i *ngIf="v1.children.length == 0"></i>

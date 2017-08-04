@@ -16,7 +16,6 @@
     font-size: 12px;
     color: #FFF;
     opacity: 0;
-    border-radius: 17px;
     display: inline-block;
     -webkit-transform: translate3d(0, 0, 0);
     -webkit-animation: action-message_open 2s ease 0s 1 alternate forwards;

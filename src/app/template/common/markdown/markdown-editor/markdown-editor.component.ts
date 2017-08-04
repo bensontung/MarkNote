@@ -306,8 +306,6 @@ export class MarkdownEditorComponent implements OnInit, OnDestroy {
 
             if (res) {
 
-                console.log(this.node.baseConfig.path.attached);
-
                 let imagesPathArr = res;
                 const limit = 10;
                 imagesPathArr = imagesPathArr.length > limit ? imagesPathArr.splice(0, limit) : imagesPathArr;

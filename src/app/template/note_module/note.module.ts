@@ -10,7 +10,6 @@ import {ViewComponent} from './view/view.component';
 
 import {ViewTabsComponent} from './view/view-tabs/view-tabs.component';
 
-import {TreeListViewComm} from '../../service/treeListViewComm';
 import {MDEditorViewerComm} from '../../service/mdEditorViewer';
 
 import {UseSystemBrowserDirective} from '../../directive/useSystemBrowser.directive';
@@ -36,7 +35,6 @@ import {MarkdownViewerComponent} from '../common/markdown/markdown-viewer/markdo
         UseSystemBrowserDirective
     ],
     providers: [
-        {provide: 'TreeListViewComm', useClass: TreeListViewComm},
         {provide: 'MDEditorViewerComm', useClass: MDEditorViewerComm}
     ]
 })

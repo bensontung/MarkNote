@@ -17,10 +17,11 @@ export class SuperLinkComponent implements OnInit, AfterViewInit, OnDestroy {
 
     constructor(@Inject('modalComm') private modalComm) {
         this.superLink = {
-            text: ''
+            text: 'http://'
         };
         this.config = {
             title: '插入超链接',
+            header: true,
             footerButton: true,
             headerClose: true
         };

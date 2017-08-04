@@ -1,0 +1,286 @@
+:host .search-panel {
+    width: 500px;
+    height: 300px;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 55px;
+}
+
+:host .search-panel .search-header {
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    position: absolute;
+    padding: 0 20px 0 20px;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    font-size: 14px;
+    color: #FFF;
+    background: #32C27D;
+    -webkit-user-select: none;
+}
+
+:host .search-panel > .close {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    color: #EEE;
+    -webkit-user-select: none;
+}
+
+:host .search-panel > .close:hover {
+    color: #FFF;
+}
+
+:host .search-panel > .filter {
+    position: absolute;
+    right: 45px;
+    top: 15px;
+}
+
+:host .search-panel > .filter > .group {
+    height: 25px;
+    line-height: 25px;
+    float: left;
+    margin-left: 20px;
+}
+
+:host .search-panel > .filter > .group span,
+:host .search-panel > .filter > .group small {
+    height: 25px;
+    line-height: 25px;
+    float: left;
+    color: #FFF;
+    -webkit-user-select: none;
+}
+
+:host .search-panel > .filter > .group span input {
+    width: 17px;
+    height: 17px;
+    line-height: 17px;
+    float: left;
+    font-size: 10px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+:host .search-panel > .filter > .group small {
+    margin-left: 5px;
+}
+
+:host .search-panel > .search-body {
+    width: 100%;
+    height: 100%;
+    float: left;
+    position: relative;
+    padding-top: 35px;
+}
+
+:host .search-panel > .search-body > .search-input {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 20px;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+}
+
+:host .search-panel > .search-body > .search-input > .wrap {
+    width: 100%;
+    height: 35px;
+    float: left;
+    position: relative;
+}
+
+:host .search-panel > .search-body > .search-input > .wrap > input {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    padding-right: 120px;
+    float: left;
+    font-weight: normal;
+    border: none;
+    background: none;
+    font-size: 12px;
+    color: #068548;
+    box-sizing: border-box;
+    border-bottom: 1px solid #F5F5F5;
+}
+
+:host .search-panel > .search-body > .search-input > .wrap .count {
+    height: 35px;
+    line-height: 35px;
+    position: absolute;
+    right: 15px;
+    top: 0;
+    color: #444;
+    font-size: 12px;
+}
+
+:host .search-panel > .search-body > .search-input > .wrap .count em {
+    color: #068548;
+    font-style: normal;
+}
+
+:host .search-panel > .search-body > .search-input > .wrap input:focus {
+    border-bottom: 1px solid #32C27D;
+}
+
+:host .search-panel > .search-body > .tree {
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid #F5F5F5;
+    box-sizing: border-box;
+    float: left;
+    padding: 10px 0 10px 0;
+}
+
+:host .search-panel > .search-body > .tree .block {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+:host .search-panel > .search-body > .tree .block.active .label i,
+:host .search-panel > .search-body > .tree .block.active .label span {
+    color: #32C27D;
+}
+
+:host .search-panel > .search-body > .tree .block .label {
+    width: 100%;
+    height: 30px;
+    float: left;
+    box-sizing: border-box;
+}
+
+:host .search-panel > .search-body > .tree .block .label.v1 {
+    padding-left: 20px;
+}
+
+:host .search-panel > .search-body > .tree .block .label.v2 {
+    padding-left: 40px;
+}
+
+:host .search-panel > .search-body > .tree .block .label.v3 {
+    padding-left: 60px;
+}
+
+:host .search-panel > .search-body > .tree .block .label.v4 {
+    padding-left: 80px;
+}
+
+:host .search-panel > .search-body > .tree .block .label.v5 {
+    padding-left: 100px;
+}
+
+:host .search-panel > .search-body > .tree .block .label:hover {
+    background: #FCFCFC;
+}
+
+:host .search-panel > .search-body > .tree .block.default {
+    padding-left: 0;
+}
+
+:host .search-panel > .search-body > .tree .block i {
+    width: 20px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    float: left;
+    color: #888;
+    -webkit-user-select: none;
+}
+
+:host .search-panel > .search-body > .tree .block span {
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    font-size: 12px;
+    color: #444;
+    margin-left: 5px;
+    -webkit-user-select: none;
+}
+
+:host .search-panel > .search-body .search-list {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+:host .search-panel > .search-body .search-list .block {
+    width: 100%;
+    float: left;
+    font-size: 12px;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: relative;
+    border-bottom: 1px solid #F7F7F7;
+}
+
+:host .search-panel > .search-body .search-list .block .count {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #F06868;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+:host .search-panel > .search-body .search-list .block:last-child {
+    border-bottom: none;
+}
+
+:host .search-panel > .search-body .search-list .block:hover {
+    background: #FCFCFC;
+}
+
+:host .search-panel > .search-body .search-list .title {
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    float: left;
+    color: #444;
+    overflow: hidden;
+    word-break: break-all;
+    -webkit-user-select: none;
+}
+
+:host /deep/ .search-panel > .search-body .search-list .title em {
+    color: #068548;
+    font-style: normal;
+}
+
+:host /deep/ .search-panel > .search-body .search-list small {
+    height: 18px;
+    line-height: 18px;
+    display: inline-block;
+    font-style: normal;
+    background: #FDFF03;
+    font-size: 12px;
+}
+
+:host .search-panel > .search-body .search-list .des {
+    width: 100%;
+    float: left;
+    max-height: 50px;
+    line-height: 18px;
+    word-break: break-all;
+    overflow: hidden;
+    color: #999;
+    font-weight: 200;
+    -webkit-user-select: none;
+}

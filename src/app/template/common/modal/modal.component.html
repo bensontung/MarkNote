@@ -1,8 +1,8 @@
-<div class="modal" *ngIf="modal == true">
+<div class="modal" *ngIf="modal == true" [ngClass]="{'markIsNot':config.mask == false, 'headerIsNot': config.header == false}">
     <div class="modal-mask"></div>
     <div class="modal-panel drag-box">
         <div class="modal-body">
-            <div class="modal-header" appModalDrag>
+            <div class="modal-header" [hidden]="config.header == false" appModalDrag>
                 <span class="title">{{config.title}}</span>
                 <span class="close iconfont icon-close" *ngIf="config.headerClose == true" (click)="closeModal()"></span>
             </div>

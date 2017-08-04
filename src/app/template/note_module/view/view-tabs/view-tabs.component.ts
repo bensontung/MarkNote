@@ -53,8 +53,6 @@ export class ViewTabsComponent implements OnInit {
             return false;
         }
 
-        console.log('激活');
-
         this.tabActiveId = id;
         this.tabActiveOut.emit(id);
         this.select();
@@ -62,8 +60,6 @@ export class ViewTabsComponent implements OnInit {
     }
 
     tabClose(v) {
-
-        console.log('关闭');
 
         if (event) {
             event.stopPropagation();

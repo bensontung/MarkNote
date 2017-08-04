@@ -1,0 +1,33 @@
+<app-modal [config]="config" #appModal>
+    <div class="modal-content">
+        <div class="search-panel">
+            <div class="search-header" appModalDrag>
+                高级检索
+            </div>
+            <div class="close iconfont icon-close" (click)="close()"></div>
+            <div class="filter">
+                <div class="group">
+                    <label><span><input type="checkbox" [checked]="where.title" (change)="selectWhere('title'); where.title = !where.title" /></span><small>标题</small></label>
+                </div>
+                <div class="group">
+                    <label><span><input type="checkbox" [checked]="where.content" (change)="selectWhere('content'); where.content = !where.content" /></span><small>内容</small></label>
+                </div>
+            </div>
+            <div class="search-body">
+                <div class="search-input">
+                    <div class="wrap">
+                        <input type="text" placeholder="在这里输入搜索关键字" [(ngModel)]="schKeys" (keyup)="schFn($event, schKeys)" />
+                        <div class="count" [hidden]="search.count == 0">找到 <em>{{search.count}}</em> 章日志</div>
+                    </div>
+                </div>
+                <div class="search-list">
+                    <div class="block" *ngFor="let v of searchData" (click)="goToSchNote(v.id, v.title)">
+                        <div class="title" [innerHTML]="v.title"></div>
+                        <div class="des" [innerHTML]="v.des"></div>
+                        <div class="count">{{v.schCount}}个结果</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-modal>

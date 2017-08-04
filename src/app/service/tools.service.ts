@@ -26,7 +26,7 @@ export class DragService {
 
         const box = closest(elem, '.drag-box');
         const boxX = (document.body.clientWidth / 2) - (box.clientWidth / 2);
-        const boxY = (document.body.clientHeight - 64) * 0.25;
+        const boxY = (document.body.clientHeight) * 0.25;
 
         box.style.transform = 'translate(' + boxX + 'px, ' + boxY + 'px)';
 
@@ -37,8 +37,8 @@ export class DragService {
 
             const moveW = box.clientWidth;
             const moveH = box.clientHeight;
-            const maxW = document.body.clientWidth - moveW - 9;
-            const maxH = document.body.clientHeight - moveH - 9;
+            const maxW = document.body.clientWidth - moveW;
+            const maxH = document.body.clientHeight - moveH;
             const moveX = e.offsetX;
             const moveY = e.offsetY;
 
@@ -50,12 +50,12 @@ export class DragService {
 
                     let X, Y;
 
-                    X = event.clientX - moveX - 5;
-                    Y = event.clientY - moveY - 64;
-                    X = X > 5 ? X : 5;
+                    X = event.clientX - moveX;
+                    Y = event.clientY - moveY;
+                    X = X > 0 ? X : 0;
                     X = X < maxW ? X : maxW;
-                    Y = Y > 2 ? Y : 2;
-                    Y = Y < maxH - 64 ? Y : maxH - 64;
+                    Y = Y > 0 ? Y : 0;
+                    Y = Y < maxH ? Y : maxH;
 
                     box.style.transform = 'translate(' + X + 'px, ' + Y + 'px)';
                     box.style.cursor = 'move';
