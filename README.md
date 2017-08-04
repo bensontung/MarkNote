@@ -40,5 +40,12 @@ link: [MarkNote1.0_for_win x64][1]
 
 ![image](http://down.wunao.net/5.jpg)
 
+---
+
+#### License ####
+
+GPL v2
+
 [1]:http://down.wunao.net/MarkNote1.0.zip  
 [2]:http://down.wunao.net/sqlite3-electronv1.6.x_x64.zip  
+
