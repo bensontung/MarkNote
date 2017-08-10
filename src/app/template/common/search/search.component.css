@@ -17,9 +17,12 @@
     left: 0;
     top: 0;
     font-size: 14px;
-    color: #FFF;
-    background: #32C27D;
+    color: #444;
+    font-weight: 400;
+    background: #FFF;
+    border-bottom: 1px solid #E9E9E9;
     -webkit-user-select: none;
+    font-family: poppin,'PingFang SC',Tahoma,Arial,\5FAE\8F6F\96C5\9ED1,sans-serif;
 }
 
 :host .search-panel > .close {
@@ -31,18 +34,20 @@
     right: 0;
     top: 0;
     cursor: pointer;
-    color: #EEE;
+    color: #CCC;
     -webkit-user-select: none;
 }
 
 :host .search-panel > .close:hover {
-    color: #FFF;
+    color: #777;
 }
 
 :host .search-panel > .filter {
     position: absolute;
     right: 45px;
     top: 15px;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 :host .search-panel > .filter > .group {
@@ -57,7 +62,7 @@
     height: 25px;
     line-height: 25px;
     float: left;
-    color: #FFF;
+    color: #444;
     -webkit-user-select: none;
 }
 

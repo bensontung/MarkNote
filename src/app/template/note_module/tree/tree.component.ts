@@ -1,6 +1,7 @@
 import {Component, OnInit, Inject, NgZone} from '@angular/core';
 import {RecursionTree} from '../../../service/recursionTree';
 import {TreeListViewComm} from '../../../service/treeListViewComm';
+import {SettingComponent} from '../../common/setting/setting.component';
 
 @Component({
     selector: 'app-tree',
@@ -31,7 +32,8 @@ export class TreeComponent implements OnInit {
         @Inject('E_service') private E_service,
         @Inject('dialog') private dialog,
         @Inject('actionMessage') private actionMessage,
-        @Inject('TreeListViewComm') private TreeListViewComm
+        @Inject('TreeListViewComm') private TreeListViewComm,
+        @Inject('modalComm') private modalComm
     ) {
         this.Zone = zone;
         this.tree_active = [];
@@ -364,6 +366,10 @@ export class TreeComponent implements OnInit {
         event.stopPropagation();
         this.treeSelectd(v);
         this.contextMenuTeam(event, v, type).popup(this.E_service.remote.getCurrentWindow());
+    }
+
+    settingPanel() {
+        this.modalComm.insert.emit(SettingComponent);
     }
 
 }

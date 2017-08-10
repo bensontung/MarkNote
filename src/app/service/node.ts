@@ -4,7 +4,6 @@ declare const path: any;
 declare const appPath: any;
 declare const exec: any;
 declare const md5: any;
-declare const imageinfo: any;
 declare const baseConfig: any;
 
 import {Injectable} from '@angular/core';
@@ -17,7 +16,6 @@ export class NodeService {
     public path: any;
     public appPath: any;
     public exec: any;
-    public imageinfo: any;
     public baseConfig: any;
     public md5: any;
 
@@ -26,7 +24,6 @@ export class NodeService {
         this.fs         = fs;
         this.path       = path;
         this.exec       = exec;
-        this.imageinfo  = imageinfo;
         this.baseConfig = baseConfig;
         this.md5        = md5;
     }

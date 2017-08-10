@@ -14,7 +14,6 @@
         const appPath     = __dirname.replace(`\\${path.basename(__dirname)}`, '');
         const exec        = require('child_process').exec;
         const md5         = electron.remote.require('md5');
-        const imageinfo   = electron.remote.require('imageinfo');
         window.ondragover = function(e) { e.preventDefault(); return false };
         window.ondrop     = function(e) { e.preventDefault(); return false };
         const devModel    = false;

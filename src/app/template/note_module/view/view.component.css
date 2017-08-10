@@ -165,7 +165,7 @@
 }
 
 :host /deep/ .view .article-wrap .preview pre {
-    width: 98%;
+    width: 100%;
     margin-bottom: 20px;
     overflow-y: hidden;
     float: left;

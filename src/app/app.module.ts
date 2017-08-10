@@ -32,9 +32,9 @@ import {ModalComm} from './service/modal.comm';
 import {ModalComponent} from './template/common/modal/modal.component';
 
 import {SearchComponent} from './template/common/search/search.component';
+import {SettingComponent} from './template/common/setting/setting.component';
 
 import {SuperLinkComponent} from './template/common/markdown/markdown-editor/markdown-editor-modal/super-link/super-link.component';
-import {ImagesModuleSettingComponent} from './template/images_module/setting/setting.component';
 
 
 @NgModule({
@@ -54,7 +54,7 @@ import {ImagesModuleSettingComponent} from './template/images_module/setting/set
         SearchComponent,
         AppModalDirective,
         SuperLinkComponent,
-        ImagesModuleSettingComponent
+        SettingComponent
     ],
     providers: [
         GuardService,
@@ -74,7 +74,7 @@ import {ImagesModuleSettingComponent} from './template/images_module/setting/set
     entryComponents: [
         SearchComponent,
         SuperLinkComponent,
-        ImagesModuleSettingComponent
+        SettingComponent
     ],
     bootstrap: [AppComponent]
 })

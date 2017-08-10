@@ -1,0 +1,80 @@
+:host .setting-panel {
+    width: 750px;
+    height: 450px;
+    float: left;
+    position: relative;
+    padding-top: 40px;
+    box-sizing: border-box;
+}
+
+:host .setting-panel .setting-header {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #31C27C;
+}
+
+:host .setting-panel .setting-header .title {
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    margin-left: 20px;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+:host .setting-panel .sidebar {
+    width: 200px;
+    height: 100%;
+    float: left;
+    background: #FCFCFC;
+    -webkit-box-sizing: border-box;
+}
+
+:host .setting-panel .sidebar .block {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px 0 30px;
+    float: left;
+    position: relative;
+    font-size: 14px;
+    color: #444;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+}
+
+:host .setting-panel .sidebar .block:before,
+:host .setting-panel .sidebar .block.active:before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    left: 15px;
+    top: 18px;
+    border-radius: 50%;
+    background-color: #777;
+}
+
+:host .setting-panel .sidebar .block:hover {
+    background-color: #eee;
+}
+
+:host .setting-panel .sidebar .block.active {
+    background-color: #eee;
+    color: #068548;
+}
+
+:host .setting-panel .sidebar .block.active:before {
+    background-color: #068548;
+}
+
+:host .setting-panel .main {
+    width: 550px;
+    height: 100%;
+    float: left;
+}

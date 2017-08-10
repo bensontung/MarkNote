@@ -28,6 +28,26 @@
     /*border-bottom: 1px solid #E0E0E0;*/
 }
 
+:host .tree .item-name span {
+    height: 32px;
+    float: left;
+}
+
+:host .tree .item-name i {
+    height: 32px;
+    line-height: 32px;
+    float: right;
+    font-size: 18px;
+    color: #999;
+    cursor: pointer;
+    text-align: center;
+    -webkit-app-region: no-drag;
+}
+
+:host .tree .item-name i:hover{
+    color: #555;
+}
+
 :host .tree .item-block {
     width: 100%;
     float: left;
@@ -114,7 +134,7 @@
     float: left;
     cursor: pointer;
     margin-right: 3px;
-    word-break:break-all;
+    word-break: break-all;
 }
 
 :host .tree .item-block .label.default span {
