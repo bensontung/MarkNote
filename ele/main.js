@@ -79,8 +79,6 @@ function createWindow () {
         mainWindow.webContents.send('windUnmaximize');
     });
     
-    mainWindow.maximize()
-    
 }
 
 app.disableHardwareAcceleration();
