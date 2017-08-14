@@ -1,12 +1,35 @@
 <app-modal [config]="config" #appModal>
     <div class="modal-content">
         <div class="setting-panel">
-            <div class="setting-header" appModalDrag><span class="title">全局设置</span></div>
-            <div class="sidebar">
-                <div class="block">基本设置</div>
-                <div class="block active">在线升级</div>
+            <div class="setting-header" appModalDrag><span class="title">在线升级</span></div>
+            <div class="main"  *ngIf="isNewVersion !== 0 && (updateing === 0)">
+                <div class="area-top">
+                    <div class="logo"></div>
+                    <div class="info">
+                        <p>MarkNote</p>
+                        <p>当前版本：{{localVersion.version}} ({{localVersion.minor}})</p>
+                        <p>最新版本：{{remoteVersion.version}} ({{remoteVersion.minor}})</p>
+                    </div>
+                </div>
+                <div class="area-bottom">
+                    <p *ngIf="isNewVersion === 2 && updateDone === true"><span>已升级，重启应用使用新版本</span></p>
+                    <p *ngIf="isNewVersion === 2 && updateDone === false" title="{{updateDone}}"><span>您已是最新版本</span></p>
+                    <p *ngIf="isNewVersion === 1"><button (click)="appUpdate()">立即更新</button></p>
+                    <p *ngIf="isNewVersion === 2 && updateDone === true"><button (click)="appReset()">重启应用</button></p>
+                </div>
             </div>
-            <div class="main">main</div>
+            <div class="main" *ngIf="isNewVersion === 0  && updateing === 0">
+                <div class="loading">
+                    <i class="fa fa-refresh fa-spin fa-fw"></i>
+                </div>
+            </div>
+            <div class="main updateing" *ngIf="updateing === 1">
+                <div class="progress"><div class="c" [ngStyle]="{'width': progress}">{{update_text}}</div></div>
+                <div class="resetApp">
+                    <button *ngIf="updateDone === false" title="{{updateDone}}" >重启应用</button>
+                    <button *ngIf="updateDone === true" class="active" (click)="appReset()" title="{{updateDone}}" >重启应用</button>
+                </div>
+            </div>
         </div>
     </div>
 </app-modal>

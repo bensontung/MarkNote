@@ -1,80 +1,183 @@
 :host .setting-panel {
-    width: 750px;
-    height: 450px;
+    width: 350px;
     float: left;
     position: relative;
-    padding-top: 40px;
+    padding-top: 55px;
     box-sizing: border-box;
 }
 
 :host .setting-panel .setting-header {
     width: 100%;
-    height: 40px;
-    line-height: 40px;
+    height: 55px;
+    line-height: 55px;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #31C27C;
+    box-sizing: border-box;
+    border-bottom: 1px solid #E9E9E9;
 }
 
 :host .setting-panel .setting-header .title {
-    height: 40px;
-    line-height: 40px;
+    height: 54px;
+    line-height: 54px;
     float: left;
     margin-left: 20px;
-    color: #FFF;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-:host .setting-panel .sidebar {
-    width: 200px;
-    height: 100%;
-    float: left;
-    background: #FCFCFC;
-    -webkit-box-sizing: border-box;
-}
-
-:host .setting-panel .sidebar .block {
-    width: 100%;
-    height: 40px;
-    line-height: 40px;
-    padding: 0 10px 0 30px;
-    float: left;
-    position: relative;
-    font-size: 14px;
     color: #444;
-    cursor: pointer;
-    -webkit-box-sizing: border-box;
-}
-
-:host .setting-panel .sidebar .block:before,
-:host .setting-panel .sidebar .block.active:before {
-    content: '';
-    width: 4px;
-    height: 4px;
-    position: absolute;
-    left: 15px;
-    top: 18px;
-    border-radius: 50%;
-    background-color: #777;
-}
-
-:host .setting-panel .sidebar .block:hover {
-    background-color: #eee;
-}
-
-:host .setting-panel .sidebar .block.active {
-    background-color: #eee;
-    color: #068548;
-}
-
-:host .setting-panel .sidebar .block.active:before {
-    background-color: #068548;
+    font-size: 16px;
 }
 
 :host .setting-panel .main {
-    width: 550px;
-    height: 100%;
+    width: 100%;
+    height: 200px;
     float: left;
+    position: relative;
+    padding: 20px 20px 20px 20px;
+    box-sizing: border-box;
+}
+
+:host .setting-panel .main .area-top,
+:host .setting-panel .main .area-bottom {
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+:host .setting-panel .main .area-bottom {
+    margin-top: 20px;
+}
+
+:host .setting-panel .main .area-top .logo {
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+    background: url(../../../../statics/images/logo.png) no-repeat;
+}
+
+:host .setting-panel .main .area-top .info {
+    width: 180px;
+    display: inline-block;
+    text-align: left;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+:host .setting-panel .main .area-top .info p {
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    float: left;
+    font-size: 14px;
+    color: #777;
+}
+
+:host .setting-panel .main .area-bottom p {
+    width: 100%;
+    float: left;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+:host .setting-panel .main .area-bottom p span {
+    color: #31C27C;
+    font-size: 14px;
+}
+
+:host .setting-panel .main .bottom {
+    width: 100%;
+    position: absolute;
+    top: 104px;
+    left: 0;
+    box-sizing: border-box;
+    padding: 0 20px 0 20px;
+}
+
+:host .setting-panel .main .bottom p {
+    height: 24px;
+    float: left;
+    margin-top: 15px;
+    text-align: center;
+}
+
+:host .setting-panel .main p button {
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    background: #FFF;
+    color: #31C27C;
+    display: inline-block;
+    border: 1px solid #31C27C;
+}
+
+:host .setting-panel .main .loading {
+    width: 100%;
+    height: 160px;
+    line-height: 160px;
+    text-align: center;
+    float: left;
+    color: #ccc;
+}
+
+:host .setting-panel .main .loading i {
+    font-size: 32px;
+}
+
+:host .setting-panel .main.updateing{
+    height: 140px;
+}
+
+:host .setting-panel .main.updateing .text {
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    float: left;
+    font-size: 12px;
+}
+
+:host .setting-panel .main.updateing .progress {
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    float: left;
+    margin-top: 10px;
+    background: #EEE;
+}
+
+:host .setting-panel .main.updateing .progress .c {
+    width: 0;
+    height: 25px;
+    float: left;
+    overflow: hidden;
+    background: #31C27C;
+    text-align: center;
+    font-size: 12px;
+    color: #FFF;
+}
+
+:host .setting-panel .main.updateing .message {
+    height: 25px;
+    line-height: 25px;
+    float: left;
+    font-size: 12px;
+}
+
+:host .setting-panel .main.updateing .resetApp{
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-top:20px;
+}
+
+:host .setting-panel .main.updateing .resetApp button {
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    background: #FFF;
+    color: #CCC;
+    display: inline-block;
+    border: 1px solid #CCC;
+}
+
+:host .setting-panel .main.updateing .resetApp button.active{
+    color: #31C27C;
+    border: 1px solid #31C27C;
 }

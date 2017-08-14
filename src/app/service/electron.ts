@@ -4,6 +4,8 @@ import {Injectable} from '@angular/core';
 @Injectable()
 export class ElectronService {
 
+    public app: any;
+    public session: any;
     public remote: any;
     public menu: any;
     public shell: any;
@@ -14,6 +16,8 @@ export class ElectronService {
 
     constructor() {
 
+        this.app           = electron.app;
+        this.session       = electron.session;
         this.remote        = electron.remote;
         this.menu          = electron.remote.Menu;
         this.shell         = electron.remote.shell;

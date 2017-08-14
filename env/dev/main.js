@@ -8,10 +8,6 @@ const Tray          = electron.Tray;
 const Menu          = electron.Menu;
 const BrowserWindow = electron.BrowserWindow;
 
-const appVerInfo   = fs.readFileSync(path.join(__dirname, 'package.json'));
-const appVerOBJ    = JSON.parse(appVerInfo.toString());
-const appSource    = 'v' + appVerOBJ.version + '_' + appVerOBJ.minor + '.asar';
-
 // 加载自动更新模块
 const appUpdate = require('./appUpdate');
 
@@ -36,11 +32,7 @@ function createWindow () {
     mainWindow.once('ready-to-show', () => {
         mainWindow.show();
     });
-    mainWindow.loadURL(url.format({
-        pathname : path.join(__dirname, `${appSource}/index.html`),
-        protocol : 'file:',
-        slashes  : true
-    }));
+    mainWindow.loadURL('http://localhost:4200/');
     mainWindow.webContents.openDevTools();
     
     mainWindow.on('closed', function () {
@@ -142,11 +134,11 @@ updateConfig.diffJson   = `/dev/update.json`;
 updateConfig.fileSuffix = `.asar`;
 updateConfig.localJson  = path.join(__dirname, 'package.json');
 
-const verInfo       = fs.readFileSync(updateConfig.localJson);
-const verInfoOBJ    = JSON.parse(verInfo.toString());
-const verOBJ        = {};
-verOBJ.version      = verInfoOBJ.version;
-verOBJ.minor        = verInfoOBJ.minor;
+const verInfo    = fs.readFileSync(updateConfig.localJson);
+const verInfoOBJ = JSON.parse(verInfo.toString());
+const verOBJ     = {};
+verOBJ.version   = verInfoOBJ.version;
+verOBJ.minor     = verInfoOBJ.minor;
 global.localVersion = verOBJ;
 
 // 监听渲染进程的请求更新事件
@@ -155,11 +147,13 @@ ipcMain.on('checkRemoteVersion', (event, arg) => {
     new appUpdate(updateConfig, event.sender).init();
 })
 
+
 ipcMain.on('startUpdate', (event, arg) => {
     new appUpdate(updateConfig, event.sender).update(arg);
 })
 
 ipcMain.on('appReset', (event, arg) => {
-    app.relaunch({args : process.argv.slice(1).concat(['--relaunch'])})
+    app.relaunch({args: process.argv.slice(1).concat(['--relaunch'])})
     app.exit(0)
 })
+

@@ -22,6 +22,8 @@ import {DBService} from './service/sqlite3';
 import {NodeService} from './service/node';
 import {LocalStorageService} from './service/local-storage.service';
 
+import {SessionService} from './service/session.service';
+
 import {TreeListViewComm} from './service/treeListViewComm';
 
 import {ActionMessageComm} from './service/action-message_comm';
@@ -69,7 +71,8 @@ import {SuperLinkComponent} from './template/common/markdown/markdown-editor/mar
         {provide: 'actionMessage', useClass: ActionMessageComm},
         {provide: 'modalComm', useClass: ModalComm},
         {provide: 'substr', useClass: SubstrService},
-        {provide: 'TreeListViewComm', useClass: TreeListViewComm}
+        {provide: 'TreeListViewComm', useClass: TreeListViewComm},
+        {provide: 'session', useClass: SessionService}
     ],
     entryComponents: [
         SearchComponent,
