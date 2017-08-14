@@ -15,7 +15,6 @@ class appUpdate {
     }
     
     init () {
-        console.log('进来了');
         (async () => {
             const localVerOBJ  = this.localVersion();
             const remoteVerOBJ = await this.remoteVersion()();
@@ -146,7 +145,6 @@ class appUpdate {
                 });
             });
             res.on('end', () => {
-                console.log('完毕');
                 const data = Buffer.concat(chunks, size);
                 fs.writeFile(path.join(__dirname, packTemp), data, (err) => {
                     if (err) {

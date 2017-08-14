@@ -85,8 +85,6 @@ function createWindow () {
 
 // 只允许开启一个实例
 const shouldQuit = app.makeSingleInstance((commandLine, workingDirectory) => {
-    console.log(commandLine);
-    console.log(workingDirectory);
     if (mainWindow) {
         if (mainWindow.isMinimized()) {
             mainWindow.restore();
@@ -151,7 +149,6 @@ global.localVersion = verOBJ;
 
 // 监听渲染进程的请求更新事件
 ipcMain.on('checkRemoteVersion', (event, arg) => {
-    console.log('进来了1');
     new appUpdate(updateConfig, event.sender).init();
 })
 
