@@ -26,8 +26,8 @@ link: [sqlite3-electronv1.6.x_x64][2]
 ---
 
 #### download&use: ####    
-md5 : DFB2CD90AB55BDAE2B60E0733D28D138  
-link: [MarkNote1.0_for_win x64][1]
+md5 : 23B6087AE7244D5106D13080E4CFA584  
+link: [MarkNoteSetup_for_win x64][1]
 
 ---  
 
@@ -48,6 +48,6 @@ link: [MarkNote1.0_for_win x64][1]
 
 GPL v2
 
-[1]:http://down.wunao.net/MarkNote1.0.zip  
+[1]:http://down.wunao.net/MarkNoteSetup.exe 
 [2]:http://down.wunao.net/sqlite3-electronv1.6.x_x64.zip  
 
